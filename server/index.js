@@ -268,7 +268,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
 // Serve files in the downloads directory
 app.use('/downloads', express.static(path.join(__dirname, '..', 'downloads')));
 
-const port = 'https://invoice-generator-backend-uock.onrender.com';
+const port = process.env.PORT || 5000;;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
