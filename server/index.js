@@ -262,13 +262,13 @@ app.post('/upload', upload.single('file'), (req, res) => {
   XLSX.writeFile(invoiceWorkbook, invoiceFilePath);
 
   // Send response with download links
-  res.json({ outputFile: `https://invoice-generator-backend-1-j6ve.onrender.com/downloads/output.xlsx`, invoiceFile: `https://invoice-generator-backend-1-j6ve.onrender.com/downloads/invoice.xlsx` });
+  res.json({ outputFile: `https://invoice-generator-backend-uock.onrender.com/downloads/output.xlsx`, invoiceFile: `https://invoice-generator-backend-uock.onrender.com/downloads/invoice.xlsx` });
 });
 
 // Serve files in the downloads directory
 app.use('/downloads', express.static(path.join(__dirname, '..', 'downloads')));
 
-const port = 'https://invoice-generator-backend-1-j6ve.onrender.com;';
+const port = 'https://invoice-generator-backend-uock.onrender.com';
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
