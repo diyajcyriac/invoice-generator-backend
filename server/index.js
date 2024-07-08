@@ -248,7 +248,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
       row[3], // no. of packets
       row[4],     // <blank>
       row[5], // gms
-      row[8], // Total no. of kgs
+      row[10], // Total no. of kgs
       row[14],// Adjusted rates per kg
       row[15] // Price with adjusted Rates
     ];
